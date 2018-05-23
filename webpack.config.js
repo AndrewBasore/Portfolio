@@ -1,3 +1,10 @@
+/* 
+ * This file is the configurations file for webpack.
+ * It dictates the entrypoint for compilations and the
+ * output file as well. We set our mode to development,
+ * and our module object describes what loaders should be 
+ * used to compile the project.
+*/
 module.exports = {
     entry: './src/js/app.js',
     output: {
