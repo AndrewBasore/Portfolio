@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 export default class Portfolio extends Component {
   render() {
     return (
-      <div>
-        <header>I am the Portfolio</header>
+      <div id="portfolio">
+        <header>Portfolio</header>
       </div>
     )
   }
