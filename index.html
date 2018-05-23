@@ -1,3 +1,13 @@
+<!--
+    @author Andrew Basore
+    Intent:
+    HTML file to be served to the browser. We import
+    CSS, our bundled JS from webpack is run at the end of
+    this file to render our Hello React component to the browser
+    Description:
+    This project is an exercise and a template for React boilerplates
+    using
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,9 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Webpack App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- Below links to main CSS. This is turning our h1 red -->
+    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/main.css" />
 </head>
 <body>
-    <script src="./dist/bundle.js"></script>
+    <div id='app'></div> <!-- div#app is where React App is rendered with ReactDOM.render in app.js-->
+    <script src="./dist/bundle.js"></script> <!-- /dist/bundle.js is our compiled JS from webpack-->
 </body>
 </html>
