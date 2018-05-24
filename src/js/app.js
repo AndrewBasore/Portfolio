@@ -9,10 +9,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Hello extends React.Component {
-    render(){
-        return <h1>Hello World</h1>
-    }
-}
+import Portfolio from './components/Portfolio.js';
+import Sidebar from './components/Sidebar.js';
 
-ReactDOM.render(<Hello/>, document.getElementById('app'));
+import css from "../css/main.scss";
+
+
+ReactDOM.render((
+    <div>
+        <Sidebar />
+        <Portfolio/>
+    </div>
+), document.getElementById('app'));

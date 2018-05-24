@@ -15,11 +15,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Webpack App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
     <!-- Below links to main CSS. This is turning our h1 red -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="./src/css/main.css" /> -->
 </head>
 <body>
     <div id='app'></div> <!-- div#app is where React App is rendered with ReactDOM.render in app.js-->
-    <script src="./dist/bundle.js"></script> <!-- /dist/bundle.js is our compiled JS from webpack-->
+    <script src="../dist/bundle.js"></script> <!-- /dist/bundle.js is our compiled JS from webpack-->
 </body>
 </html>
