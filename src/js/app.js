@@ -10,22 +10,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Portfolio from './components/Portfolio.js';
+import Sidebar from './components/Sidebar.js';
 
 import css from "../css/main.scss";
 
 
 ReactDOM.render((
     <div>
-        <div className="sidebar">
-            <div class="logo">Awesome<span>Portfolio</span></div>
-            <nav>
-                <a href="" class="nav-item">Home</a>
-                <a href="" class="nav-item">About</a>
-                <a href="" class="nav-item active">Portfolio</a>
-                <a href="" class="nav-item">Contact</a>
-            </nav>
-        </div>
-        
+        <Sidebar />
         <Portfolio/>
     </div>
 ), document.getElementById('app'));
