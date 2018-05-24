@@ -16,7 +16,7 @@ const port = 3000;
 app.use('/dist', express.static(path.resolve(path.join(__dirname, '..', 'dist'))));
 
 // Send index.html for anything else.
-app.get('/', (_, res) => {
+app.get('/*', (_, res) => {
     console.log("Im about to attempt to serve HTML");
     res.sendFile(path.resolve(path.join(__dirname, '..', 'index.html')))
   }

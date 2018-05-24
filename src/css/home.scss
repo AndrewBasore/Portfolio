@@ -1,0 +1,27 @@
+.home{
+    display:grid;
+    grid-template-areas: 
+            "head head" 
+            "bio photo" 
+            "bio photo" ;
+            
+    grid-template-rows:   125px repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    justify-items: center;
+    align-items: top;
+    padding: 0;
+    
+    h1{
+        grid-area: head;
+    }
+
+    img{
+        grid-area: photo;
+    }
+
+    p{
+        grid-area: bio;
+        margin-left: 6%;
+    }
+}
