@@ -33,7 +33,7 @@ export default class Portfolio extends Component {
             <div className="main-content">
                 <div className="portfolio">
                     <div className="portfolio-item medium">one</div>
-                    <div className="portfolio-item large two">two</div>
+                    <div className="portfolio-item large gray">two</div>
                     <div className="portfolio-item medium">three</div>
                     <div className="portfolio-item small">four</div>
                     <div className="portfolio-item tall">five</div>
