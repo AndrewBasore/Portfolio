@@ -5,6 +5,9 @@
  * and our module object describes what loaders should be 
  * used to compile the project.
 */
+
+
+
 module.exports = {
     entry: './src/js/app.js',
     output: {
@@ -12,6 +15,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     mode: 'development',
+    devtool: "source-map",
     module: {
         rules: [
             {
@@ -21,7 +25,10 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react']
                 }
+            }, {
+                test: /\.scss?$/, use: ['style-loader', 'css-loader', 'sass-loader']
             }
+
         ]
     }
 }
