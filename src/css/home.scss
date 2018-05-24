@@ -1,4 +1,7 @@
+// @author Andrew Basore
+// Intent: Make grid styling for Component that displays biographical information
 .home{
+    //Setup CSS Grid 
     display:grid;
     grid-template-areas: 
             "head head" 
@@ -12,6 +15,8 @@
     align-items: top;
     padding: 0;
     
+
+    //Place elements into their grid
     h1{
         grid-area: head;
     }
