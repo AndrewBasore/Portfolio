@@ -12,7 +12,7 @@ export default class Sidebar extends Component {
             <a href="" class="nav-item active">Portfolio</a>
             <a href="" class="nav-item">Contact</a>
         </nav>
-    </div>
+      </div>
     )
   }
 }
