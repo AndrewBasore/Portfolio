@@ -4,12 +4,12 @@
     //Setup CSS Grid 
     display:grid;
     grid-template-areas: 
-            "head head" 
-            "bio photo" 
-            "bio photo" ;
+            "head head head" 
+            "tree bio photo" 
+            "tree bio photo" ;
             
     grid-template-rows:   125px repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
 
     justify-items: center;
@@ -24,11 +24,18 @@
         text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
     }
 
-    img{
+    #face{
         grid-area: photo;
         height: 300px;
         width: 300px;
         border-radius: 100%;
+    }
+
+    #palm-tree{
+        display:flex;
+        grid-area: tree;
+        height: 200px;
+        align-content: center;
     }
 
     p{
@@ -43,6 +50,9 @@
             "head head head"
             "photo photo photo"
             "bio bio bio";
+        #palm-tree{
+            display: none;
+        }
     }
 
     @media(max-width: 400px){

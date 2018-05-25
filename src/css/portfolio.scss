@@ -111,7 +111,7 @@ body {
 .portfolio {
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
 }
@@ -166,13 +166,13 @@ body {
 }
 
 .gray {
-  background-image: url(//unsplash.it/800/600);
+  background-image: --background-url;
   
   &::before {
     content: '';
     display: block;
     background: $black;
-    opacity: 0.8;
+    opacity: 0.2;
     position: absolute;
     top: 0;
     right: 0;
@@ -183,7 +183,7 @@ body {
   }
   
   &:hover::before {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 
