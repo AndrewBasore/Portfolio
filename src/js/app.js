@@ -37,6 +37,7 @@ class Layout extends React.Component {
                 <div className="mdl-layout__drawer">
                     <span className="mdl-layout-title">Popular Links</span>
                     <nav className="mdl-navigation">
+                        <Link className="mdl-navigation__link" to="/">Home</Link>
                         <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
                     </nav>
                 </div>
