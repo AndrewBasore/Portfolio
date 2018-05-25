@@ -20,6 +20,8 @@
     //Place elements into their grid
     h1{
         grid-area: head;
+        color: $orange;
+        text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
     }
 
     img{
@@ -31,12 +33,12 @@
 
     p{
         grid-area: bio;
-        margin-left: 6%;
+        margin: 1% 6% ;
         
     }
 
 
-    @media(max-width: 650px){
+    @media(max-width: 900px){
         grid-template-areas:
             "head head head"
             "photo photo photo"
