@@ -116,6 +116,7 @@ body {
 // ===================
 
 .portfolio {
+  
   display: grid;
   height: 100%;
   width: 800px;
@@ -139,6 +140,8 @@ body {
 }
 
 .portfolio-item {
+  
+  
   background: $accent;
   color: $light-gray;
   &.light-back{
