@@ -1,3 +1,38 @@
 // Entrypoint for SCSS files. All files imported here will be loaded by webpack
 @import "portfolio.scss";
 @import "home.scss";
+
+//grid css for footer
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(100px, 4);
+    grid-template-areas: 'author social-media email';
+    background-color:#ef570b;
+
+    img{
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
+    }
+
+    p{
+        padding-left: 5px;
+        margin-bottom:1px;
+        text-align: center;
+        font-size: x-small;
+    }
+
+    #social-media{
+        grid-area: social-media;
+    }
+
+    #author{
+        grid-area: author;
+    }
+
+    #email{
+        grid-area: email;
+    }
+
+}

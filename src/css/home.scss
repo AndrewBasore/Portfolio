@@ -10,6 +10,7 @@
             
     grid-template-rows:   125px repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
 
     justify-items: center;
     align-items: top;
@@ -23,10 +24,29 @@
 
     img{
         grid-area: photo;
+        height: 300px;
+        width: 300px;
+        border-radius: 100%;
     }
 
     p{
         grid-area: bio;
         margin-left: 6%;
+        
+    }
+
+
+    @media(max-width: 650px){
+        grid-template-areas:
+            "head head head"
+            "photo photo photo"
+            "bio bio bio";
+    }
+
+    @media(max-width: 400px){
+        img{
+            height: 240px;
+            width: 240px;
+        }
     }
 }

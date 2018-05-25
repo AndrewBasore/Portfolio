@@ -27,7 +27,7 @@ export default class Portfolio extends Component {
     //     })
     //     .catch( err => console.error(err))
     // }
- 
+    
     render() {
         return (
             <div className="main-content">

@@ -8,11 +8,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
 import Portfolio from './components/Portfolio.js';
-import Sidebar from './components/Sidebar.js';
-import Home from './components/Home.js';
+import Home from './components/Home/';
 
 import css from "../css/main.scss";
 
@@ -24,17 +23,47 @@ class Layout extends React.Component {
     }
     render(){
         return(
-            <main>
-                <Sidebar />
-                <Switch>
-                    <Route exact path='/' component={Home}/>
-                    <Route path='/portfolio' component={Portfolio}/>
-                </Switch>
-            </main>
+            <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+                <header className="mdl-layout__header">
+                    <div className="mdl-layout__header-row">
+                        <span className="mdl-layout-title">Basore Development</span>
+                    <div className="mdl-layout-spacer"></div>
+                        <nav className="mdl-navigation mdl-layout--large-screen-only">
+                            <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
+                            <Link className="mdl-navigation__link" to="/">Home</Link>
+                        </nav>
+                    </div>
+                </header>
+                <div className="mdl-layout__drawer">
+                    <span className="mdl-layout-title">Popular Links</span>
+                    <nav className="mdl-navigation">
+                        <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
+                    </nav>
+                </div>
+                <main className="mdl-layout__content">
+                    <div className="page-content">
+                        <Switch>
+                            <Route exact path='/' component={Home}/>
+                            <Route path='/portfolio' component={Portfolio}/>
+                        </Switch>
+                    </div>
+                </main>
+                <footer>
+                    {/* <p>Coded by: Andrew Basore 
+                        Social Media:<a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin"></a> <span>|</span><span>Email: basoreDev@protonmail.com</span>
+                    </p>    */}
+                    <p id="author">Coded by: Andrew Basore </p>
+                    <p id="social-media">Social Media: 
+                        <a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin" /></a>
+                    </p>
+                    <p id="email">Email: basoreDev@protonmail.com</p>
+                </footer>
+            </div>
         )
     }
 }
 
+//Connect Layout with BrowserRouter and render it out to div#app
 ReactDOM.render((
     <BrowserRouter>
         <Layout />
