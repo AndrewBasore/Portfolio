@@ -8,20 +8,37 @@ footer{
     display: grid;
     grid-template-columns: repeat(100px, 4);
     grid-template-areas: 'author social-media email';
-    background-color:#ef570b;
+    background-color: $orange;
+    $small-screen: 600px;
+    $large-screen: 900px;
+    $medium-screen: 600px;
+
+
+    
+    
 
     img{
         margin-left: 5px;
         height: 20px;
         width: 20px;
+
+        
     }
 
     p{
         padding-left: 5px;
         margin-bottom:1px;
         text-align: center;
-        font-size: x-small;
+        font-size: small;
+        @media(max-width: $small-screen){ 
+            span{
+                display: none;
+            } 
+            font-size: x-small;}
     }
+    
+        
+    
 
     #social-media{
         grid-area: social-media;
@@ -34,5 +51,7 @@ footer{
     #email{
         grid-area: email;
     }
+
+    
 
 }

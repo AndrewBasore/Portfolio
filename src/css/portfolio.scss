@@ -2,7 +2,6 @@
 // Import Google Font - Raleway 300 & 700
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
-
 // ===================
 // Font and color variables
 // ===================
@@ -17,7 +16,7 @@ $black: #353535;
 $gray: #4f4f4f;
 $medium-gray: #737373;
 $light-gray: #c4c4c4;
-$orange: #f96855;
+$orange: #ef570b;
 
 // Semantic color names
 $accent: $orange;
@@ -36,7 +35,7 @@ $link-color: $accent;
 // General styles
 // ===================
 
-* { box-sizing: border-box; }
+// * { box-sizing: border-box; }
 
 body {
   background: $body-background;
@@ -96,10 +95,18 @@ body {
 // ===================
 
 .main-content {
-  padding: 10%;
   flex: 1 1 80%;
   min-height: 100vh;
+  display:grid;
+  justify-content: center;
 
+  h1{
+    text-align: center;
+    color: $orange;
+    text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 
@@ -109,16 +116,37 @@ body {
 // ===================
 
 .portfolio {
+  
   display: grid;
   height: 100%;
-  grid-template-rows: repeat(8, 1fr);
-  grid-template-columns: repeat(5, 1fr);
+  width: 800px;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  @media(max-width: 850px){ 
+    width: 620px;
+    grid-template-columns: repeat(4, 1fr);
+  };
+  @media(max-width: 675px){ 
+    width: 450px;
+    grid-template-columns: repeat(2, 1fr);
+    
+  };
+  @media(max-width: 500px){ 
+    width: 250px;
+  };
+
+  
   grid-gap: 20px;
 }
 
 .portfolio-item {
+  
+  
   background: $accent;
   color: $light-gray;
+  &.light-back{
+    color: $gray;
+  }
   font-weight: $font-bold;
   display: flex;
   justify-content: center;
@@ -166,13 +194,13 @@ body {
 }
 
 .gray {
-  background-image: url(//unsplash.it/800/600);
+  background-image: --background-url;
   
   &::before {
     content: '';
     display: block;
     background: $black;
-    opacity: 0.8;
+    opacity: 0.2;
     position: absolute;
     top: 0;
     right: 0;
@@ -183,7 +211,7 @@ body {
   }
   
   &:hover::before {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 

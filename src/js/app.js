@@ -10,7 +10,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Switch, Route, Link} from 'react-router-dom';
 
-import Portfolio from './components/Portfolio.js';
+import Portfolio from './components/Portfolio';
 import Home from './components/Home/';
 
 import css from "../css/main.scss";
@@ -37,6 +37,7 @@ class Layout extends React.Component {
                 <div className="mdl-layout__drawer">
                     <span className="mdl-layout-title">Popular Links</span>
                     <nav className="mdl-navigation">
+                        <Link className="mdl-navigation__link" to="/">Home</Link>
                         <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
                     </nav>
                 </div>
@@ -52,11 +53,12 @@ class Layout extends React.Component {
                     {/* <p>Coded by: Andrew Basore 
                         Social Media:<a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin"></a> <span>|</span><span>Email: basoreDev@protonmail.com</span>
                     </p>    */}
-                    <p id="author">Coded by: Andrew Basore </p>
-                    <p id="social-media">Social Media: 
+                    <p id="author"><span>Coded by: </span>Andrew Basore </p>
+                    <p id="social-media"><span>Social Media: </span>
                         <a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin" /></a>
+                        <a href="https://github.com/AndrewBasore"><img className="github"src="https://kek.gg/i/7Cb8Rn.png" alt="Linkedin" /></a>
                     </p>
-                    <p id="email">Email: basoreDev@protonmail.com</p>
+                    <p id="email"><span>Email: </span>basoreDev@protonmail.com</p>
                 </footer>
             </div>
         )

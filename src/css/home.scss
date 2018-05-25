@@ -1,52 +1,77 @@
 // @author Andrew Basore
 // Intent: Make grid styling for Component that displays biographical information
 .home{
-    //Setup CSS Grid 
+    //Setup CSS Grid
+    
+
+    //name some variables
+    $header-height: 110px;
+    $small-screen: 400px;
+    $large-screen: 900px;
+    $medium-screen: 600px;
+    $face-size: 300px;
+
+    //media queries for $header-height variable
+    @media(max-width: $large-screen){
+        $header-height: 50px;
+    }
+    @media(max-width: $medium-screen){
+        $header-height: 80px;
+        $face-size: 200px;
+    };
+    
+    
+    
+    
     display:grid;
     grid-template-areas: 
-            "head head" 
-            "bio photo" 
-            "bio photo" ;
+            "head head head" 
+            "bio bio photo" 
+            "bio bio photo" ;
             
-    grid-template-rows:   125px repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:   $header-height $face-size 1fr;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
 
     justify-items: center;
     align-items: top;
-    padding: 0;
+    padding: 0 4%;
     
 
     //Place elements into their grid
     h1{
         grid-area: head;
+        color: $orange;
+        text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
+        @media(max-width: $large-screen){
+            font-size: 1.75em;
+            margin: 5% 0;
+            height: 20px; 
+        }
     }
 
-    img{
+    #face{
         grid-area: photo;
-        height: 300px;
-        width: 300px;
+        height: $face-size;
+        width: $face-size;
         border-radius: 100%;
     }
 
     p{
         grid-area: bio;
-        margin-left: 6%;
+        margin: 1% 6% ;
+        align-self: center;
+        justify-self: both;
         
     }
 
 
-    @media(max-width: 650px){
+    @media(max-width: $large-screen){
         grid-template-areas:
             "head head head"
             "photo photo photo"
             "bio bio bio";
     }
 
-    @media(max-width: 400px){
-        img{
-            height: 240px;
-            width: 240px;
-        }
-    }
+    
 }
