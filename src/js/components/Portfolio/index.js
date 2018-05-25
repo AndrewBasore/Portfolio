@@ -28,24 +28,19 @@ export default class Portfolio extends Component {
                     href: 'http://shipping-ships.herokuapp.com/products' 
                 }, {
                     imgURL: 'https://kek.gg/i/5tkK6d.png',
-                    name: 'Analysis Dashboard',
+                    name: 'Dashboard',
                     description: 'An analysis dashboard that leverages sentiment analysis on several multi-media',
                     href: 'https://sentimentum.herokuapp.com/home'
                 }, {
-                    imgURL: 'https://kek.gg/i/3tq9cr.png',
-                    name: 'Tribute',
-                    description: 'Tribute Page for Reghar Earthfury, Gladiator of the Nexus',
-                    href: 'https://codepen.io/basor1aj/full/bpWpWQ'
+                    imgURL: 'https://kek.gg/i/wjVb9.png',
+                    name: 'Wikipedia',
+                    description: 'Small viewer for wikipedia searches',
+                    href: 'https://codepen.io/AndrewBasore/full/mBjYNg/'
                 }, {
-                    imgURL: 'https://kek.gg/i/4ztwrX.jpg',
-                    name: 'E-Commerce',
-                    description: 'Mock E-Commerce Page that sells fictional boats',
-                    href: 'http://shipping-ships.herokuapp.com/products' 
-                }, {
-                    imgURL: 'https://kek.gg/i/5tkK6d.png',
-                    name: 'Analysis Dashboard',
-                    description: 'An analysis dashboard that leverages sentiment analysis on several multi-media',
-                    href: 'https://sentimentum.herokuapp.com/home'
+                    imgURL: 'https://kek.gg/i/8cgvN.png',
+                name: 'Quotes',
+                    description: 'Random Quote Generator',
+                    href: 'https://codepen.io/AndrewBasore/full/jLjXzw/' 
                 }
             ]
         };
@@ -67,6 +62,7 @@ export default class Portfolio extends Component {
         var project2 = projects[1];
         var project3 = projects[2];
         var project4 = projects[3];
+        var project5 = projects[4];
         var style1={
             'backgroundImage': `url(${project1.imgURL})`
         }
@@ -79,27 +75,19 @@ export default class Portfolio extends Component {
         var style4={
             'backgroundImage': `url(${project4.imgURL})`
         }
+        var style5={
+            'backgroundImage': `url(${project5.imgURL}`
+        }
         return (
             <div className="main-content">
+                <h1>Portfolio</h1>
                 <div className="portfolio">
+                    
                     <a href={project1.href}className="portfolio-item medium gray" style={style1}>{project1.name}</a>
-                    <a href={project2.href} className="portfolio-item large gray" style={style2}>{project2.name}</a>
-                    <a href={project3.href} className="portfolio-item medium" style={style3}>{project3.name}</a>
-                    <div className="portfolio-item small">four</div>
-                    <div className="portfolio-item tall">five</div>
-                    <div className="portfolio-item wide">six</div>
-                    <div className="portfolio-item wide">six</div>
-                    <div className="portfolio-item ">one</div>
-                    <div className="portfolio-item tall">one</div><div className="portfolio-item medium">one</div>
-                    {
-                        this.state.projects.map( (project, index) => {
-                            
-                            return(
-                                <Project project={project} key={index} />
-                            );
-                            
-                        })
-                    }
+                    <a href={project2.href} className="portfolio-item medium light-back gray" style={style2}>{project2.name}</a>
+                    <a href={project3.href} className="portfolio-item medium  gray" style={style3}>{project3.name}</a>
+                    <a href={project4.href} className="portfolio-item medium  gray" style={style4}>{project4.name}</a>
+                    <a href={project5.href} className="portfolio-item medium  gray" style={style5}>{project5.name}</a>
                 </div>
             </div>
         )

@@ -9,6 +9,12 @@ footer{
     grid-template-columns: repeat(100px, 4);
     grid-template-areas: 'author social-media email';
     background-color: $orange;
+    $small-screen: 600px;
+    $large-screen: 900px;
+    $medium-screen: 600px;
+
+
+    
     
 
     img{
@@ -22,7 +28,15 @@ footer{
         margin-bottom:1px;
         text-align: center;
         font-size: small;
+        @media(max-width: $small-screen){ 
+            span{
+                display: none;
+            } 
+            font-size: x-small;}
     }
+    
+        
+    
 
     #social-media{
         grid-area: social-media;
