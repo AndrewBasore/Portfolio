@@ -12,8 +12,9 @@ const path = require('path')
 const port = 3000;
 
 
-//setup static files to be serves on route '/dist'
+//setup static files to be serves on route '/dist' and '/img'
 app.use('/dist', express.static(path.resolve(path.join(__dirname, '..', 'dist'))));
+app.use('/img', express.static(path.resolves(path.join(__dirname, '..', 'img'))))
 
 // Send index.html for anything else.
 app.get('/*', (_, res) => {
