@@ -17,15 +17,15 @@ import axios from 'axios';
 export default class Portfolio extends Component {
     constructor (){
         super();
-        this.state = {};
+        this.state = {
+            projects: []
+        };
     }
 
     //loads project data via axios request and appends them to state property
     componentDidMount(){
-        console.log("I mounted!", this.state)
         axios.get('/projects').then( (res) =>{
             this.setState( () => {
-                console.log("Setting state!");
                 return {projects: res.data.projects};
             })
         })
@@ -35,13 +35,12 @@ export default class Portfolio extends Component {
     
     render() {
 
-        if(this.state.projects){
+        if(this.state.projects.length > 0){
             var projects = this.state.projects;        
             return (
                 <div className="main-content">
                     <h1>Portfolio</h1>
                     <div className="portfolio">
-                        
                         <a href={projects[0].href}className="portfolio-item medium gray" style={{backgroundImage:projects[0].backgroundImage}}>{projects[0].name}</a>
                         <a href={projects[1].href} className="portfolio-item medium light-back gray" style={{backgroundImage:projects[1].backgroundImage}} >{projects[1].name}</a>
                         <a href={projects[2].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[2].backgroundImage}}>{projects[2].name}</a>

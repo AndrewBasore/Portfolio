@@ -17,14 +17,12 @@ app.use('/dist', express.static(path.resolve(path.join(__dirname, '..', 'dist'))
 app.use('/img', express.static(path.resolve(path.join(__dirname, '..', 'img'))))
 
 app.get('/projects', (req, res) =>{
-  console.log("Ive been hit!");
   var result = require('./utils/projects.js'); //replace with database later
   res.json(result);
 })
 
 // Send index.html for anything else.
 app.get('/*', (_, res) => {
-    console.log("Im about to attempt to serve HTML");
     res.sendFile(path.resolve(path.join(__dirname, '..', 'index.html')))
   }
 )
