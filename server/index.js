@@ -12,12 +12,19 @@ const path = require('path')
 const port = 3000;
 
 
-//setup static files to be serves on route '/dist'
+//setup static files to be serves on route '/dist' and '/img'
 app.use('/dist', express.static(path.resolve(path.join(__dirname, '..', 'dist'))));
+app.use('/img', express.static(path.resolve(path.join(__dirname, '..', 'img'))))
+
+
+// /projects route sends back JSON of Projects array
+app.get('/projects', (req, res) =>{
+  var result = require('./utils/projects.js'); //replace with database later
+  res.json(result);
+})
 
 // Send index.html for anything else.
 app.get('/*', (_, res) => {
-    console.log("Im about to attempt to serve HTML");
     res.sendFile(path.resolve(path.join(__dirname, '..', 'index.html')))
   }
 )

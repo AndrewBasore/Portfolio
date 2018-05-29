@@ -11,85 +11,47 @@ import Project from './Project.js';
 */
 
 import axios from 'axios';
+
+
+
 export default class Portfolio extends Component {
     constructor (){
         super();
         this.state = {
-            projects: [
-                {
-                    imgURL: 'https://kek.gg/i/3tq9cr.png',
-                    name: 'Tribute',
-                    description: 'Tribute Page for Reghar Earthfury, Gladiator of the Nexus',
-                    href: 'https://codepen.io/basor1aj/full/bpWpWQ'
-                }, {
-                    imgURL: 'https://kek.gg/i/4ztwrX.jpg',
-                    name: 'E-Commerce',
-                    description: 'Mock E-Commerce Page that sells fictional boats',
-                    href: 'http://shipping-ships.herokuapp.com/products' 
-                }, {
-                    imgURL: 'https://kek.gg/i/5tkK6d.png',
-                    name: 'Dashboard',
-                    description: 'An analysis dashboard that leverages sentiment analysis on several multi-media',
-                    href: 'https://sentimentum.herokuapp.com/home'
-                }, {
-                    imgURL: 'https://kek.gg/i/wjVb9.png',
-                    name: 'Wikipedia',
-                    description: 'Small viewer for wikipedia searches',
-                    href: 'https://codepen.io/AndrewBasore/full/mBjYNg/'
-                }, {
-                    imgURL: 'https://kek.gg/i/8cgvN.png',
-                name: 'Quotes',
-                    description: 'Random Quote Generator',
-                    href: 'https://codepen.io/AndrewBasore/full/jLjXzw/' 
-                }
-            ]
+            projects: []
         };
-
     }
 
-    // NYI HTTP Request for Project Data
-    // componentDidMount(){
-    //     console.log("I mounted!");
-    //     axios.get(`thecatapi.com/api/images/get`, (req, res) =>{
+    //loads project data via axios request and appends them to state property
+    componentDidMount(){
+        axios.get('/projects').then( (res) =>{
+            this.setState( () => {
+                return {projects: res.data.projects};
+            })
+        })
+    }
 
-    //     })
-    //     .catch( err => console.error(err))
-    // }
+
     
     render() {
-        var projects = this.state.projects;
-        var project1 = projects[0]
-        var project2 = projects[1];
-        var project3 = projects[2];
-        var project4 = projects[3];
-        var project5 = projects[4];
-        var style1={
-            'backgroundImage': `url(${project1.imgURL})`
-        }
-        var style2={
-            'backgroundImage': `url(${project2.imgURL})`
-        }
-        var style3={
-            'backgroundImage': `url(${project3.imgURL})`
-        }
-        var style4={
-            'backgroundImage': `url(${project4.imgURL})`
-        }
-        var style5={
-            'backgroundImage': `url(${project5.imgURL}`
-        }
-        return (
-            <div className="main-content">
-                <h1>Portfolio</h1>
-                <div className="portfolio">
-                    
-                    <a href={project1.href}className="portfolio-item medium gray" style={style1}>{project1.name}</a>
-                    <a href={project2.href} className="portfolio-item medium light-back gray" style={style2}>{project2.name}</a>
-                    <a href={project3.href} className="portfolio-item medium  gray" style={style3}>{project3.name}</a>
-                    <a href={project4.href} className="portfolio-item medium  gray" style={style4}>{project4.name}</a>
-                    <a href={project5.href} className="portfolio-item medium  gray" style={style5}>{project5.name}</a>
+
+        if(this.state.projects.length > 0){
+            var projects = this.state.projects;        
+            return (
+                <div className="main-content">
+                    <h1>Portfolio</h1>
+                    <div className="portfolio">
+                        <a href={projects[0].href}className="portfolio-item medium gray" style={{backgroundImage:projects[0].backgroundImage}}>{projects[0].name}</a>
+                        <a href={projects[1].href} className="portfolio-item medium light-back gray" style={{backgroundImage:projects[1].backgroundImage}} >{projects[1].name}</a>
+                        <a href={projects[2].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[2].backgroundImage}}>{projects[2].name}</a>
+                        <a href={projects[3].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[3].backgroundImage}}>{projects[3].name}</a>
+                        <a href={projects[4].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[4].backgroundImage}}>{projects[4].name}</a>
+                    </div> 
                 </div>
-            </div>
-        )
+            )
+        } else {
+            return <div>Error</div>
+        }
+        
     }
 }
