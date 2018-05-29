@@ -43,10 +43,10 @@ export default class Portfolio extends Component {
                     <div className="portfolio">
                         
                         <a href={projects[0].href}className="portfolio-item medium gray" style={{backgroundImage:projects[0].backgroundImage}}>{projects[0].name}</a>
-                        <a href={projects[1].href} className="portfolio-item medium light-back gray" >{projects[1].name}</a>
-                        <a href={projects[2].href} className="portfolio-item medium  gray" >{projects[2].name}</a>
-                        <a href={projects[3].href} className="portfolio-item medium  gray" >{projects[3].name}</a>
-                        <a href={projects[4].href} className="portfolio-item medium  gray" >{projects[4].name}</a>
+                        <a href={projects[1].href} className="portfolio-item medium light-back gray" style={{backgroundImage:projects[1].backgroundImage}} >{projects[1].name}</a>
+                        <a href={projects[2].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[2].backgroundImage}}>{projects[2].name}</a>
+                        <a href={projects[3].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[3].backgroundImage}}>{projects[3].name}</a>
+                        <a href={projects[4].href} className="portfolio-item medium  gray" style={{backgroundImage:projects[4].backgroundImage}}>{projects[4].name}</a>
                     </div> 
                 </div>
             )
