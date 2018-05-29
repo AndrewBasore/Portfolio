@@ -16,6 +16,8 @@ const port = 3000;
 app.use('/dist', express.static(path.resolve(path.join(__dirname, '..', 'dist'))));
 app.use('/img', express.static(path.resolve(path.join(__dirname, '..', 'img'))))
 
+
+// /projects route sends back JSON of Projects array
 app.get('/projects', (req, res) =>{
   var result = require('./utils/projects.js'); //replace with database later
   res.json(result);
