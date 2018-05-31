@@ -50,10 +50,7 @@
   background: $accent;
   color: $light-gray;
 
-  //class for backgrounds with light colors to make text legible
-  &.light-back{
-    color: $gray;
-  }
+  
   font-weight: $font-bold;
   display: flex;
   justify-content: center;
@@ -74,33 +71,40 @@
     grid-column: span 2;
   }
 
-  &:hover {
-    color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+  transition: transform 1s ease-in-out;
+  //transitions for Portfolio-item
+  &:hover{
+    transform-origin: 0 0;
+    transform: scale(1.1);
   }
 }
 
-.gray {
-  background-image: --background-url;
-  
-  &::before {
-    content: '';
-    display: block;
-    background: $black;
-    opacity: 0.2;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transition: all ease-in-out 300ms;
-    z-index: -1;
-  }
-  
-  &:hover::before {
-    opacity: 0.8;
-  }
+.lay-over{
+  overflow: hidden;
+  position: absolute;
 }
+
+// .gray {
+//   background-image: --background-url;
+  
+//   &::before {
+//     content: '';
+//     display: block;
+//     background: $black;
+//     opacity: 0.2;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     transition: all ease-in-out 300ms;
+//     z-index: -1;
+//   }
+  
+//   &:hover::before {
+//     opacity: 0.8;
+//   }
+// }
 
 
 
