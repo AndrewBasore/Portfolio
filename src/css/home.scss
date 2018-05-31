@@ -1,7 +1,7 @@
 // @author Andrew Basore
 // Intent: Make grid styling for Component that displays biographical information
 .home{
-    //Setup CSS Grid    
+    //Setup CSS Grid
     
     display:grid;
     grid-template-areas:
@@ -46,7 +46,7 @@
             
         }
         img{
-            margin: 20px 0;
+            margin: 15px 0;
         }
     }
 

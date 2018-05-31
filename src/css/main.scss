@@ -64,15 +64,22 @@ body {
     line-height: 1.45;
     display: grid;
     flex-wrap: wrap;
-  }
+    
+}
+
+
 h1{
-  color: $orange;
-  text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
-  @media(max-width: $large-screen){
-      font-size: 1.75em;
-      margin: 5% 0;
-      height: 20px; 
-  }
+    color: $orange;
+    text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
+    justify-items: center;
+    align-items: top;
+    padding: 0 4%;
+    text-align: center;
+    @media(max-width: $large-screen){
+        font-size: 1.75em;
+        margin: 5% 0;
+        height: 20px; 
+    }
 }
 //grid css for footer
 footer{
