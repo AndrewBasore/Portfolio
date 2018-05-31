@@ -1,4 +1,21 @@
 
+//General Styling for Main Container
+.main-content{
+  justify-content: center;
+  flex: 1 1 80%;
+  min-height: 100vh;
+  display:grid;
+
+  grid-template-rows: 75px 1fr;
+  @media(min-width: $large-screen){
+    grid-template-rows: 100px 1fr;
+  }
+
+  h1{
+    max-height: 50px;
+  }
+}
+
 // ===================
 // Portfolio
 // ===================
@@ -85,9 +102,5 @@
   }
 }
 
-.main-content{
-  justify-content: center;
-  flex: 1 1 80%;
-  min-height: 100vh;
-  display:grid;
-}
+
+
