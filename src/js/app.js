@@ -55,8 +55,8 @@ class Layout extends React.Component {
                     </p>    */}
                     <p id="author"><span>Coded by: </span>Andrew Basore </p>
                     <p id="social-media"><span>Social Media: </span>
-                        <a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin" /></a>
-                        <a href="https://github.com/AndrewBasore"><img className="github"src="https://kek.gg/i/7Cb8Rn.png" alt="Linkedin" /></a>
+                        <a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img className="icon" src="https://kek.gg/i/7vwpT6.png" alt="Linkedin" /></a>
+                        <a href="https://github.com/AndrewBasore"><img className="github icon"src="https://kek.gg/i/7Cb8Rn.png" alt="Linkedin" /></a>
                     </p>
                     <p id="email"><span>Email: </span>basoreDev@protonmail.com</p>
                 </footer>
