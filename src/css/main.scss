@@ -40,6 +40,15 @@ $large-screen: 900px;
 $medium-screen: 600px;
 $face-size: 300px;
 
+//media queries for $header-height variable
+@media(max-width: $large-screen){
+    $header-height: 50px;
+}
+@media(max-width: $medium-screen){
+    $header-height: 80px;
+    $face-size: 200px;
+};
+
 // ===================
 // General styles
 // ===================

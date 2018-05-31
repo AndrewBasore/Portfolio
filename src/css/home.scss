@@ -1,19 +1,7 @@
 // @author Andrew Basore
 // Intent: Make grid styling for Component that displays biographical information
 .home{
-    //Setup CSS Grid
-
-    //media queries for $header-height variable
-    @media(max-width: $large-screen){
-        $header-height: 50px;
-    }
-    @media(max-width: $medium-screen){
-        $header-height: 80px;
-        $face-size: 200px;
-    };
-    
-    
-    
+    //Setup CSS Grid    
     
     display:grid;
     grid-template-areas:
