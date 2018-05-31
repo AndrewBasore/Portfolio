@@ -1,115 +1,20 @@
-// SCSS imported from example by @kevinpowell
-// Import Google Font - Raleway 300 & 700
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
-// ===================
-// Font and color variables
-// ===================
-
-// Fonts
-$sans-serif: 'Raleway', sans-serif;
-$font-light: 300;
-$font-bold: 700;
-
-// Colors
-$black: #353535;
-$gray: #4f4f4f;
-$medium-gray: #737373;
-$light-gray: #c4c4c4;
-$orange: #ef570b;
-
-// Semantic color names
-$accent: $orange;
-
-$body-background: $black;
-$menu-background: $gray;
-
-$main-font-color: $light-gray;
-$menu-active-color: $light-gray;
-$menu-font-color: $medium-gray;
-$link-color: $accent;
-
-
-
-// ===================
-// General styles
-// ===================
-
-// * { box-sizing: border-box; }
-
-body {
-  background: $body-background;
-  color: $main-font-color;
-  font-family: $sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.45;
-  display: grid;
-  flex-wrap: wrap;
-}
-
-
-// ===================
-// Navigation
-// ===================
-
-.sidebar {
-  background: $menu-background;
-  flex: 1 1 20%;
-  min-width: 300px;
-  padding: 2em;
-}
-
-.logo {
-  text-transform: uppercase;
-  margin-bottom: 2em;
-  
-  @media (min-width: 1500px) {
-    margin-bottom: 5em;
-  }
-  
-  span {
-    font-weight: $font-bold;
-  }
-}
-
-.nav-item {
-  color: $menu-font-color;
-  text-decoration: none;
-  font-size: 1.7rem;
-  display: inline-block;
-  margin-right: 2em;
-  @media (min-width: 1500px) {
-    display: block;
-    margin: 7vh 0;
-  }
-  
-  &.active {
-    color: $menu-active-color;
-  }
-}
-
-
-
-// ===================
-// Main Content area
-// ===================
-
-.main-content {
+//General Styling for Main Container
+.main-content{
+  justify-content: center;
   flex: 1 1 80%;
   min-height: 100vh;
   display:grid;
-  justify-content: center;
+
+  grid-template-rows: 75px 1fr;
+  @media(min-width: $large-screen){
+    grid-template-rows: 100px 1fr;
+  }
 
   h1{
-    text-align: center;
-    color: $orange;
-    text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.79);
-    width: 100%;
-    margin-bottom: 0;
+    max-height: 50px;
   }
 }
-
-
 
 // ===================
 // Portfolio
@@ -144,6 +49,8 @@ body {
   
   background: $accent;
   color: $light-gray;
+
+  //class for backgrounds with light colors to make text legible
   &.light-back{
     color: $gray;
   }
@@ -162,31 +69,11 @@ body {
   position: relative;
   z-index: 10;
   
-  &.small {
-    grid-row: span 1;
-    grid-column: span 1;
-  }
-  
   &.medium {
-    grid-row: span 2;
+    grid-row: span 4;
     grid-column: span 2;
   }
-  
-  &.large {
-    grid-row: span 3;
-    grid-column: span 3;
-  }
-  
-  &.tall {
-    grid-row: span 3;
-    grid-column: span 2;
-  }
-  
-  &.wide {
-    grid-row: span 2;
-    grid-column: span 3;
-  }
-    
+
   &:hover {
     color: white;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
@@ -214,4 +101,6 @@ body {
     opacity: 0.8;
   }
 }
+
+
 
