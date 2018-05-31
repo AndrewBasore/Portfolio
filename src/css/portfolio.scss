@@ -55,7 +55,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  overflow: hidden;
   // Refractored the code a little from the video.
   // Moved these from the .two, thought it made
   // more sense like this.
@@ -71,41 +71,37 @@
     grid-column: span 2;
   }
 
-  transition: transform 1s ease-in-out;
-  //transitions for Portfolio-item
-  &:hover{
-    transform-origin: 0 0;
-    transform: scale(1.1);
+  &:hover .lay-over{
+    transform: translate(0);
   }
+
 }
 
 .lay-over{
-  opacity: 0;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  transform: translate(-100%);
+  grid-template-columns: 30px repeat(3, 1fr);
+  grid-template-area: 
+    "links space text"
+    "links space text";
+  background-color: black;
+  opacity: 1;
+  justify-content:  right;
   position: absolute;
+  transition-property:  transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+  &:hover{
+    width: 100%;
+  }
 }
 
-// .gray {
-//   background-image: --background-url;
-  
-//   &::before {
-//     content: '';
-//     display: block;
-//     background: $black;
-//     opacity: 0.2;
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     bottom: 0;
-//     left: 0;
-//     transition: all ease-in-out 300ms;
-//     z-index: -1;
-//   }
-  
-//   &:hover::before {
-//     opacity: 0.8;
-//   }
-// }
+.links{
+  justify-content: left;
+}
+
 
 
 
