@@ -39,6 +39,7 @@ $small-screen: 400px;
 $large-screen: 900px;
 $medium-screen: 600px;
 $face-size: 300px;
+$icon-size: 20px;
 
 //media queries for $header-height variable
 @media(max-width: $large-screen){
@@ -84,8 +85,8 @@ h1{
 
 img.icon{
     margin-left: 5px;
-    height: 20px;
-    width: 20px; 
+    height: $icon-size;
+    width: $icon-size; 
 }
 
 //grid css for footer

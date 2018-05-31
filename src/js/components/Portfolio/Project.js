@@ -13,12 +13,20 @@ export default class Project extends Component {
     return (
       
         <div  className={`portfolio-item medium`} style={style}>
-            <div className='lay-over' >
-                <div className='links'>
-                    <a href={project.href}><img  className="icon" src="/img/page-icon.png"/></a>
-                    <a href={project.href}><img  className="icon" src="/img/code-icon.png"/></a>
+            <div className='links'>
+                <div className="site">
+                    <p>Website</p>
+                    <a href={project.href}><img  className="icon site" src="/img/page-icon.png"/></a>
                 </div>
+                <div className="code">
+                    <p>Code</p>
+                    <a href={project.href}><img  className="icon code" src="/img/code-icon.png"/></a>
+                </div>
+                   
+                </div>
+            <div className='description' >
                 <h4>{project.name}</h4>
+                <p>{project.description}</p>
             </div>
         </div>
       
