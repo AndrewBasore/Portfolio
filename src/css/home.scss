@@ -14,6 +14,26 @@
         grid-template-rows: 100px $face-size 1fr;
     }
 
+    @media(max-width: 800px){
+        @media(min-width:410px){
+            .contact{
+                transform: translateX(-50px);
+            }
+        }
+    }
+    @media(min-width: 800px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "head head head"
+            "photo photo  contact"
+            "bio bio contact";
+
+        //translate contact up
+        .contact{
+            transform: translateY(-150px);
+        }
+    }
+
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
 
@@ -43,12 +63,15 @@
         
     }
     .social-media{
-        width: 250px;
         img{
             width: 40px;
             height: 40px;
             margin: 5px;
         }
+    }
+
+    .contact{
+        width: 100%;        
     }
     
 }
