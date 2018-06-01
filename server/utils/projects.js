@@ -22,7 +22,7 @@ module.exports = {
         }, {
             imgURL: 'https://kek.gg/i/5tkK6d.png',
             name: 'Dashboard',
-            description: 'An analysis dashboard that leverages sentiment analysis on several multi-media',
+            description: 'A sentiment analysis dashboard that analyses multiple media',
             href: 'https://sentimentum.herokuapp.com/home',
             backgroundImage: 'https://kek.gg/i/5tkK6d.png',
             code: 'https://github.com/AndrewBasore/sentiNote'
