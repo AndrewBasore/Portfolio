@@ -26,7 +26,6 @@ export default class Project extends Component {
                 </div>
             <div className='description' >
                 <h4>{project.name}</h4>
-                <p>{project.description}</p>
             </div>
         </div>
       
