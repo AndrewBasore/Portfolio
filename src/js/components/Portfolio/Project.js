@@ -12,9 +12,9 @@ export default class Project extends Component {
         }
     return (
       
-        <div>
+        <div className="portfolio-container">
             <p><strong>{project.name}</strong></p>
-            <div className={`portfolio-item medium`} style={style}></div>
+            <div className={`portfolio-item`} style={style}></div>
             
         </div>
       
