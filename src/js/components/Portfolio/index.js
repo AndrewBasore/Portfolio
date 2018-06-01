@@ -40,7 +40,14 @@ export default class Portfolio extends Component {
             return (
                 <div className="main-content">
                     <div className="portfolio">
-                        <Project project={projects[0]} />                 
+                        {
+                            projects.map( (project) =>{
+                                return (
+                                    <Project project={project} />
+                                )
+                            })
+                        }
+                                      
                     </div> 
                 </div>
             )
