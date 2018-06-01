@@ -16,8 +16,8 @@ export default class Project extends Component {
             <div className="back photo-desc">
               <h3>{project.name}</h3>
               <p>{project.description}</p>
-                <a href="#" class="button">website</a>
-                <a href="#" class="button">code</a>
+                <a href={project.href} className="button">website</a>
+                <a href={project.code} class="button">code</a>
             </div>
             <img className="left" src="img/photos/2.jpg" alt=""/>
             <img className="right" src="img/photos/3.jpg" alt=""/>
