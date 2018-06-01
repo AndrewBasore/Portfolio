@@ -9,7 +9,7 @@ const app = express();
 const path = require('path')
 
 //Listens on port 3000
-const port = (process.env.POR || 3000);
+const port = (process.env.PORT || 3000);
 
 
 //setup static files to be serves on route '/dist' and '/img'
