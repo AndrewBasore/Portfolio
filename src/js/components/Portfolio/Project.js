@@ -10,17 +10,17 @@ export default class Project extends Component {
         
     return (
       
-    <div class="cube-container">
-        <div class="photo-cube">
-            <img class="front" src={project.backgroundImage} alt=""/>
-            <div class="back photo-desc">
+    <div className="cube-container">
+        <div className="photo-cube">
+            <img className="front" src={project.backgroundImage} alt=""/>
+            <div className="back photo-desc">
               <h3>{project.name}</h3>
               <p>{project.description}</p>
                 <a href="#" class="button">website</a>
                 <a href="#" class="button">code</a>
             </div>
-            <img class="left" src="img/photos/2.jpg" alt=""/>
-            <img class="right" src="img/photos/3.jpg" alt=""/>
+            <img className="left" src="img/photos/2.jpg" alt=""/>
+            <img className="right" src="img/photos/3.jpg" alt=""/>
         </div>
     </div>	
       

@@ -124,7 +124,7 @@ p {
 }
 
 .photo-cube {
-	transition: transform 2s ease-in-out;
+	transition: transform 2s cubic-bezier(.65,-0.27,.55,1.38);
 	width: 220px;
 	height: 200px;
 	transform-style: preserve-3d;
