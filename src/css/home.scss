@@ -9,7 +9,7 @@
             "photo photo photo"
             "bio bio bio";
             
-    grid-template-rows:   $header-height $face-size 1fr;
+    grid-template-rows:   60px $face-size 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
 
@@ -28,7 +28,7 @@
         height: $face-size;
         width: $face-size;
         border-radius: 100%;
-        box-shadow: 10px 5px teal;
+        box-shadow: 8px 4px teal, -8px -4px $russian-violet;
     }
 
     p{
