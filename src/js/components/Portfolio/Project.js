@@ -13,7 +13,7 @@ export default class Project extends Component {
     return (
       
         <div  className={`portfolio-item medium`} style={style}>
-            <div className='links'>
+            {/* <div className='links'>
                 <div className="site">
                     <p>Website</p>
                     <a href={project.href}><img  className="icon site" src="/img/page-icon.png"/></a>
@@ -26,7 +26,8 @@ export default class Project extends Component {
                 </div>
             <div className='description' >
                 <h4>{project.name}</h4>
-            </div>
+            </div> */}
+            I'm the Beautiful and Well-Lit Project
         </div>
       
     )

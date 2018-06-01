@@ -23,25 +23,12 @@ class Layout extends React.Component {
     }
     render(){
         return(
-            <div className="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-                <header className="mdl-layout__header">
-                    <div className="mdl-layout__header-row">
-                        <span className="mdl-layout-title">Basore Development</span>
-                    <div className="mdl-layout-spacer"></div>
-                        <nav className="mdl-navigation mdl-layout--large-screen-only">
-                            <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
-                            <Link className="mdl-navigation__link" to="/">Home</Link>
-                        </nav>
-                    </div>
-                </header>
-                <div className="mdl-layout__drawer">
-                    <span className="mdl-layout-title">Popular Links</span>
-                    <nav className="mdl-navigation">
-                        <Link className="mdl-navigation__link" to="/">Home</Link>
-                        <Link className="mdl-navigation__link" to="/portfolio">Portfolio</Link>
-                    </nav>
+            <div>
+                <div className="header">
+                    <Link className="" to="/portfolio">Portfolio</Link>
+                    <Link className="" to="/">Home</Link>
                 </div>
-                <main className="mdl-layout__content">
+                <main className="">
                     <div className="page-content">
                         <Switch>
                             <Route exact path='/' component={Home}/>
@@ -49,17 +36,6 @@ class Layout extends React.Component {
                         </Switch>
                     </div>
                 </main>
-                <footer>
-                    {/* <p>Coded by: Andrew Basore 
-                        Social Media:<a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img src="https://kek.gg/i/7vwpT6.png" alt="Linkedin"></a> <span>|</span><span>Email: basoreDev@protonmail.com</span>
-                    </p>    */}
-                    <p id="author"><span>Coded by: </span>Andrew Basore </p>
-                    <p id="social-media"><span>Social Media: </span>
-                        <a href="https://www.linkedin.com/in/andrew-basore-825235116/"><img className="icon" src="https://kek.gg/i/7vwpT6.png" alt="Linkedin" /></a>
-                        <a href="https://github.com/AndrewBasore"><img className="github icon"src="https://kek.gg/i/7Cb8Rn.png" alt="Linkedin" /></a>
-                    </p>
-                    <p id="email"><span>Email: </span>basoreDev@protonmail.com</p>
-                </footer>
             </div>
         )
     }
