@@ -7,16 +7,22 @@ export default class Project extends Component {
   
     render() {
         let project = this.props.project;
-        let style = {
-            backgroundImage: project.backgroundImage
-        }
+        
     return (
       
-        <div className="portfolio-container">
-            <p><strong>{project.name}</strong></p>
-            <div className={`portfolio-item`} style={style}></div>
-            
+    <div class="cube-container">
+        <div class="photo-cube">
+            <img class="front" src={project.backgroundImage} alt=""/>
+            <div class="back photo-desc">
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+                <a href="#" class="button">website</a>
+                <a href="#" class="button">code</a>
+            </div>
+            <img class="left" src="img/photos/2.jpg" alt=""/>
+            <img class="right" src="img/photos/3.jpg" alt=""/>
         </div>
+    </div>	
       
     )
   }

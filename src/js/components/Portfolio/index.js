@@ -38,18 +38,20 @@ export default class Portfolio extends Component {
         if(this.state.projects.length > 0){
             var projects = this.state.projects;        
             return (
-                <div className="main-content">
-                    <div className="portfolio">
-                        {
-                            projects.map( (project) =>{
-                                return (
-                                    <Project project={project} />
-                                )
-                            })
-                        }
-                                      
-                    </div> 
+                <div class="container portfolio">
+                    <header class="main-header">
+                        <h1 class="name"><span>Portfolio</span></h1>
+                    </header>
+        
+                    <div class="content">
+        
+                        <Project project={projects[0]}/>
+        
+                   
+                    </div>	
+        
                 </div>
+        
             )
         } else {
             return <div>Error</div>

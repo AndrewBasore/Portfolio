@@ -10,7 +10,7 @@ module.exports = {
             name: 'Tribute',
             description: 'Tribute Page for Reghar Earthfury, Gladiator of the Nexus',
             href: 'https://codepen.io/basor1aj/full/bpWpWQ',
-            backgroundImage: 'url(https://kek.gg/i/3tq9cr.png)'
+            backgroundImage: 'https://kek.gg/i/3tq9cr.png'
         }, {
             imgURL: 'https://kek.gg/i/4ztwrX.jpg',
             name: 'E-Commerce',

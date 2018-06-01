@@ -17,7 +17,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
 
-    justify-items: center;
+    justify-items: inherit;
     align-items: top;
     padding: 0 4%;
     
@@ -41,18 +41,6 @@
         align-self: center;
         justify-self: both;
         
-    }
-
-
-    @media(min-width: $large-screen){
-        p{
-            padding: 0 20%;
-            margin-top: 40px;
-            
-        }
-        img{
-            margin: 15px 0;
-        }
     }
 
     

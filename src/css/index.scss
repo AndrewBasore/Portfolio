@@ -56,6 +56,7 @@ body {
     font-size: 1.2rem;
     line-height: 1.45;
     flex-wrap: wrap;
+    justify-items: center;
     
 }
 
@@ -75,7 +76,7 @@ h1,{
 
 .header{
     background-image: linear-gradient(to bottom left, #FFC857 0%, #40798C 50%);
-    height: 40px;
+    height: 60px;
     padding: 10px;
 
     a{
