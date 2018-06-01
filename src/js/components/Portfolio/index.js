@@ -39,7 +39,6 @@ export default class Portfolio extends Component {
             var projects = this.state.projects;        
             return (
                 <div className="main-content">
-                    <h1>Portfolio</h1>
                     <div className="portfolio">
                         <Project project={projects[0]} />                 
                     </div> 

@@ -1,1 +1,39 @@
-//keep bio ptag from spilling too wide
+//enable grid and set templates
+.main-content{
+  display:grid;
+  grid-template-rows: repeat(8, 180px); //project elements are 500px tall ?? :)
+  grid-gap: 10px;
+}
+
+.portfolio{
+  padding: 5%;
+  perspective: 700px;
+
+  h3{
+    color: $main-font-color;
+    text-align: center;
+  }
+}
+
+.portfolio-item{
+  height: 200px;
+  background-size: cover;
+  border-radius: 1em;
+  box-shadow: 2px 7px 20px 4px rgba(0,0,0,0.75);
+ 
+  p{
+    text-align: center;
+  }
+
+
+}
+
+
+//Hover animations for Project Component
+
+.portfolio-item{
+  transition: transform 1s ease-in-out;
+  &:hover{
+    transform: rotateY(180deg);
+  }
+}
