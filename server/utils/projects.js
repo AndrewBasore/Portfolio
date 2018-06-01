@@ -10,31 +10,36 @@ module.exports = {
             name: 'Tribute',
             description: 'Tribute Page for Reghar Earthfury, Gladiator of the Nexus',
             href: 'https://codepen.io/basor1aj/full/bpWpWQ',
-            backgroundImage: 'url(https://kek.gg/i/3tq9cr.png)'
+            backgroundImage: 'https://kek.gg/i/3tq9cr.png',
+            code: 'https://codepen.io/basor1aj/pen/bpWpWQ'
         }, {
             imgURL: 'https://kek.gg/i/4ztwrX.jpg',
             name: 'E-Commerce',
             description: 'Mock E-Commerce Page that sells fictional boats',
             href: 'http://shipping-ships.herokuapp.com/products',
-            backgroundImage: 'url(https://kek.gg/i/4ztwrX.jpg)'
+            backgroundImage: 'https://kek.gg/i/4ztwrX.jpg',
+            code: 'https://github.com/AndrewBasore/ShippingShips'
         }, {
             imgURL: 'https://kek.gg/i/5tkK6d.png',
             name: 'Dashboard',
-            description: 'An analysis dashboard that leverages sentiment analysis on several multi-media',
+            description: 'A sentiment analysis dashboard that analyses multiple media',
             href: 'https://sentimentum.herokuapp.com/home',
-            backgroundImage: 'url(https://kek.gg/i/5tkK6d.png)'
+            backgroundImage: 'https://kek.gg/i/5tkK6d.png',
+            code: 'https://github.com/AndrewBasore/sentiNote'
         }, {
             imgURL: 'https://kek.gg/i/wjVb9.png',
             name: 'Wikipedia',
             description: 'Small viewer for wikipedia searches',
             href: 'https://codepen.io/AndrewBasore/full/mBjYNg/',
-            backgroundImage: 'url(https://kek.gg/i/wjVb9.png)'
+            backgroundImage: 'https://kek.gg/i/wjVb9.png',
+            code: 'https://codepen.io/AndrewBasore/pen/mBjYNg'
         }, {
             imgURL: 'https://kek.gg/i/8cgvN.png',
             name: 'Quotes',
             description: 'Random Quote Generator',
             href: 'https://codepen.io/AndrewBasore/full/jLjXzw/',
-            backgroundImage: 'url(https://kek.gg/i/8cgvN.png)' 
+            backgroundImage: 'https://kek.gg/i/8cgvN.png',
+            code: 'https://codepen.io/AndrewBasore/pen/jLjXzw/'
         }
       ]
     };
