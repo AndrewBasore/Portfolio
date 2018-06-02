@@ -37,7 +37,7 @@ app.get('/*', (req, res, next) => {
 
      //If request is valid for html, send it. otherwise, pass it along to next middleware
       if(isValid)
-        res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'index.html')))
+        res.sendFile(path.resolve(path.join(__dirname, '..', 'index.html')))
       else
       res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'bundle.js')))
    
