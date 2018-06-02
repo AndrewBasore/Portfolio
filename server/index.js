@@ -24,9 +24,25 @@ app.get('/projects', (req, res) =>{
 })
 
 // Send index.html for anything else.
-app.get('/*', (req, res) => {
-    res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'index.html')))
-  }
+app.get('/*', (req, res, next) => {
+
+  //Heroku deployment seems to be seving index.html for javascript links so we have to reject requests for .js files
+  let filesIgnore = ['js']; //Array of file extensions to not send index.html for requests
+  let params = req.params;
+  let isValid = true;  //assume request is valid for index.html
+
+  filesIgnore.forEach( file => { //check to see if any file extensions are in the params
+    if(params[0].split('.').indexOf(file) !== -1)  isValid = false;
+  })
+
+     //If request is valid for html, send it. otherwise, pass it along to next middleware
+      if(isValid)
+        res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'index.html')))
+      else
+        next();
+   
+    }
+
 )
 
 app.listen(port, () => console.log("listening on port ", port))
