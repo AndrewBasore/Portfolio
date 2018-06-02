@@ -39,7 +39,7 @@ app.get('/*', (req, res, next) => {
       if(isValid)
         res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'index.html')))
       else
-        next();
+      res.sendFile(path.resolve(path.join(__dirname, '..', 'dist', 'bundle.js')))
    
     }
 
