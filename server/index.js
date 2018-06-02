@@ -25,7 +25,7 @@ app.get('/projects', (req, res) =>{
 
 // Send index.html for anything else.
 app.get('/*', (_, res) => {
-    res.sendFile(path.resolve(path.join(__dirname, '..', 'index.html')))
+    res.sendFile(path.resolve(path.join(__dirname,'index.html')))
   }
 )
 
